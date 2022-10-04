@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: Checkout the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.1.0
       - uses: actions/cache@v2.1.6
         with:
           path: ~/.gradle/caches
@@ -45,7 +45,7 @@ jobs:
     needs: publish_archives
     steps:
       - name: Checkout the repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3.1.0
       - name: Publish the plugin artifacts
         env:
           ORG_GRADLE_PROJECT_SQLDELIGHT_BUGSNAG_KEY: ${{ secrets.ORG_GRADLE_PROJECT_SQLDELIGHT_BUGSNAG_KEY }}
